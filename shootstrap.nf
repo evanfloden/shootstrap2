@@ -24,15 +24,27 @@
  * @authors
  * Maria Chatzou <mxatzou@gmail.com>
  * Paolo Di Tommaso <paolo.ditommaso@gmail.com>
+ * Evan Floden <evanfloden@gmail.com>
  */
 
 params.in_dir="$baseDir/data/dataset/*"
 params.out_dir="Shootstrap_Analysis_Results"
 params.rep_num=2
 params.seed=10
-params.aligner="clustalo"
-params.in_tree="" 
+params.in_tree=""
 
+/*
+ * Select method to generate MSA replicates
+ *  'MAFFT' | 'CLUSTAL' | 'PRANK'
+ */
+params.aligner="MAFFT"
+
+
+/*
+ * Select method to generate MSA replicates 
+ *  'shootstrap' | 'HoT' | 'guidance' |  'guidance2' 
+ */
+params.method='guidance'
 
 Channel
 	.fromPath(params.in_dir)
@@ -43,32 +55,50 @@ Channel
 in_tree_file = params.in_tree ? file(params.in_tree) : null
 if( in_tree_file ) assert in_tree_file.exists(), "The tree file does not exist: $in_tree_file !!!" 
 
-process get_shuffle_replicates{
-  publishDir params.out_dir, mode: 'copy'
 
-  input:
-      file(seq_file) from file_names
-  output:
-      file "*.fa" into shuffle_replicates mode flatten
+if ( params.method == 'shootstrap') {
+  process get_shuffle_replicates{
+    publishDir params.out_dir, mode: 'copy'
+
+    input:
+        file(seq_file) from file_names
+    output:
+        file "*.fa" into shuffle_replicates mode flatten
   
-  shell:
-  '''
+    shell:
+    '''
       tmp_name=`basename !{seq_file} | awk -F. '{print $1}'`
       seq_shuffle.pl !{seq_file} ${tmp_name} !{params.seed} !{params.rep_num}
-  '''
+    '''
 
+  }
+
+  process get_msa_replicates{
+    publishDir params.out_dir, mode: 'copy'
+
+    input:
+        file(seq_file) from shuffle_replicates
+    output:
+        file "${seq_file}.aln" into msa_replicates, msa_replicates2
+  
+    script:
+        template "${params.aligner}_msa_command"
+  }
+}
+else {
+
+  process get_msa_replicates {
+    publishDir params.out_dir, mode: 'copy'
+
+    input:
+        file(seq_file) from file_names
+    output:
+        file "*.phylip" into msa_replicates, msa_replicates2 mode flatten
+
+    script:
+        template "${params.method}_msa_command"
 }
 
-process get_msa_replicates{
-  publishDir params.out_dir, mode: 'copy'
-
-  input:
-      file(seq_file) from shuffle_replicates
-  output:
-      file "${seq_file}.aln" into msa_replicates, msa_replicates2
-  
-  script:
-      template "${params.aligner}_msa_command"
 }
 
 process get_msa_trees{

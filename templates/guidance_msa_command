@@ -1,0 +1,14 @@
+#!/bin/bash
+perl /guidance.v2.01/www/Guidance/guidance.pl --seqFile ${seq_file} --msaProgram ${params.aligner} --seqType aa --outDir \${PWD} --program GUIDANCE
+
+mkdir alternativeMSA
+
+tar -zxf MSA.${params.aligner}.Guidance_BP_Dir.tar.gz -C alternativeMSA
+
+for i in alternativeMSA/BP/BP_MSA/*.aln; do
+    j=\${i%.*}
+    perl /guidance.v2.01/www/Guidance/code2nameFasta.pl \$i Seqs.Codes \$j.fa 
+    t_coffee -other_pg seq_reformat -in \$j.fa -output phylip -out \$j.phylip
+done
+
+mv alternativeMSA/BP/BP_MSA/*.phylip .

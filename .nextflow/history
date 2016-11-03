@@ -1,0 +1,24 @@
+2016-10-28 13:30:08	-	elated_colden	-	dc8de82e0f02750745d5584495ea0e54	4f9f13e2-dacb-4651-a66e-72698eb613f3	nextflow run shootstrap.nf -profile crg
+2016-10-28 13:30:46	1.5s	amazing_roentgen	ERR	07dab4045d32225184e679c881888929	2a53ebb2-4305-4356-b7bb-1971eba88ab4	nextflow run shootstrap.nf -profile crg
+2016-10-28 13:31:34	32.8s	admiring_saha	ERR	07dab4045d32225184e679c881888929	59b269cb-a917-4ef6-8ce7-c3b90dbbd3b8	nextflow run shootstrap.nf -profile crg
+2016-10-28 13:33:55	32.9s	backstabbing_leavitt	ERR	07dab4045d32225184e679c881888929	ef3ec174-758e-459c-a88d-27966b6dbad6	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 13:37:25	32.5s	admiring_franklin	ERR	07dab4045d32225184e679c881888929	3bcace25-0dd1-4ed3-a0fb-29d5788e195c	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 13:38:15	32.9s	lonely_swirles	ERR	07dab4045d32225184e679c881888929	479e9062-16c1-45d8-91df-beb8142aff36	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 13:41:15	3m 4s	pedantic_borg	ERR	07dab4045d32225184e679c881888929	1f580aa7-7907-451c-b369-25b2fcc287c0	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 13:45:55	2m 4s	infallible_shannon	ERR	07dab4045d32225184e679c881888929	338d8067-222e-4b8b-8a0d-c5d239e15d12	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 13:49:00	3m 4s	prickly_minsky	ERR	12618c5b217e87501cb9a9baee4c1456	c714f336-14fe-4c41-8dac-bf0a1d582236	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 14:02:11	2m 4s	infallible_swartz	ERR	12618c5b217e87501cb9a9baee4c1456	f48938f5-f9f2-46d4-bb0d-0bdf5ba90d7a	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 14:15:41	2m 4s	suspicious_bhabha	ERR	12618c5b217e87501cb9a9baee4c1456	bfb590be-c2b7-4c5f-8474-7b40171414d5	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 14:28:22	2m 4s	lonely_bohr	ERR	12618c5b217e87501cb9a9baee4c1456	29473832-04c0-4cf3-a8b9-28c1446c0771	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 14:36:45	1m 3s	hopeful_wilson	ERR	12618c5b217e87501cb9a9baee4c1456	4ca438c9-9950-47c0-8fd5-d7cb61eafa37	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 14:41:59	2m 4s	jovial_euclid	ERR	12618c5b217e87501cb9a9baee4c1456	9ccd63bd-7297-4203-b7d3-94c369637dc4	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 15:09:56	6m 50s	sad_fermat	OK	12618c5b217e87501cb9a9baee4c1456	5feeb894-8f6d-4264-a566-007cccdc216e	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 15:31:19	7m 51s	small_bassi	OK	12618c5b217e87501cb9a9baee4c1456	76241184-f539-4652-97bb-1dc21afb6c24	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 16:06:05	1.7s	happy_kilby	ERR	554d5dff3b65ed57e215021de7e120f4	94d0d498-a9e4-4596-b7f2-f7c6d5c10b75	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-28 16:06:39	17m 31s	peaceful_fermat	ERR	fce1e640479bb77f2e559297f332356c	2edc840f-770b-4971-89e2-4f224d8ca88c	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-31 15:45:32	1.3s	determined_wescoff	ERR	c778343f9fdcfb2d71a60a4008ed9266	5f5e0bb9-fb6b-4743-9f4a-ef2ac1974eab	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-31 15:52:30	2h 8m 59s	cranky_agnesi	ERR	c778343f9fdcfb2d71a60a4008ed9266	8339371c-749b-4e92-9f93-d8c6f8946335	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-31 18:21:56	3m 8s	furious_noyce	ERR	c778343f9fdcfb2d71a60a4008ed9266	a7c64ac0-fa45-4023-b177-de544d3b4de0	nextflow run shootstrap.nf -profile crg -with-docker
+2016-10-31 18:28:58	3m 36s	stoic_poitras	ERR	c778343f9fdcfb2d71a60a4008ed9266	a0f5f2fe-1778-4c9b-9ba6-50dc829e6ef5	nextflow run shootstrap.nf -profile crg -with-docker
+2016-11-03 11:30:52	6m 17s	cranky_brattain	OK	c778343f9fdcfb2d71a60a4008ed9266	6bfea5b0-0f91-43ba-a638-43dfd0c3df3d	nextflow run shootstrap.nf -profile crg -with-docker
+2016-11-03 11:45:43	4m 19s	stoic_dubinsky	OK	64a2f2e34cd3dbcf9e7e086182bdef8f	c229ac4e-d758-4c22-a870-6fc4e8d872f1	nextflow run shootstrap.nf -profile crg -with-docker

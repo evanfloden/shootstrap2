@@ -29,7 +29,7 @@
 
 params.in_dir="$baseDir/data/dataset/*"
 params.out_dir="Shootstrap_Analysis_Results"
-params.rep_num=2
+params.rep_num=100
 params.seed=10
 params.in_tree=""
 
@@ -44,7 +44,7 @@ params.aligner="MAFFT"
  * Select method to generate MSA replicates 
  *  'shootstrap' | 'HoT' | 'guidance' |  'guidance2' 
  */
-params.method='guidance'
+params.method='shootstrap'
 
 Channel
 	.fromPath(params.in_dir)
@@ -82,7 +82,7 @@ if ( params.method == 'shootstrap') {
         file "${seq_file}.aln" into msa_replicates, msa_replicates2
   
     script:
-        template "${params.aligner}_msa_command"
+        template "${params.aligner}_shuffle_msa_command"
   }
 }
 else {

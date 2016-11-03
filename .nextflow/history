@@ -26,3 +26,4 @@
 2016-11-03 13:42:47	32.8s	desperate_bhaskara	ERR	0bb17157fee56da177ff519e2aed9857	dc77d06d-39ec-4065-a1a3-42dca249acdf	nextflow run shootstrap.nf -profile crg -with-docker
 2016-11-03 13:48:03	2m 38s	infallible_stallman	OK	0bb17157fee56da177ff519e2aed9857	96cfab6c-9200-47f1-92b1-4dff2bcffbf0	nextflow run shootstrap.nf -profile crg -with-docker
 2016-11-03 13:52:07	4m 13s	romantic_jepsen	OK	c106b6bd14190dd31fb1358eadd83915	e1cd6a8c-995d-4dd7-8d89-0d65cd8c9176	nextflow run shootstrap.nf -profile crg -with-docker
+2016-11-03 14:01:18	45.7s	sad_hawking	ERR	e1e6dbe356b0ac5e8c35feba649cfe45	745de6fb-768c-41ba-9090-6212c1c93417	nextflow run shootstrap.nf -profile crg -with-docker

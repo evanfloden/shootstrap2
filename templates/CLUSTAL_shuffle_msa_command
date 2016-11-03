@@ -1,0 +1,3 @@
+#!/bin/bash
+clustalw2 -infile=${seq_file} -type=protein -outfile=tmp_out.aln
+t_coffee -other_pg seq_reformat -in tmp_out.aln -output phylip -out ${seq_file}.aln

@@ -37,7 +37,7 @@ params.in_tree=""
  * Select method to generate MSA replicates
  *  'MAFFT' | 'CLUSTAL' | 'PRANK'
  */
-params.aligner="MAFFT"
+params.aligner="CLUSTAL"
 
 
 /*
